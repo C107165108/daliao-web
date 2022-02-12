@@ -1,8 +1,7 @@
 .travel-list-content {
     display: flex;
     width: 1032px;
-    flex-wrap: wrap ;
-
+    flex-wrap: wrap;
 }
 
 .news-list-title {

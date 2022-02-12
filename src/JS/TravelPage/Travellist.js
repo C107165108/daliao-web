@@ -8,11 +8,11 @@ export default class TravelList extends React.Component {
             <div className='travel-list-content'>
 
                 <TravelItem />
-                {/* <TravelItem />
                 <TravelItem />
                 <TravelItem />
                 <TravelItem />
-                <TravelItem /> */}
+                <TravelItem />
+                <TravelItem />
             </div>
         );
     }
