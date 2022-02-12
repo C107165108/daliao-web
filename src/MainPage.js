@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './JS/HomePage/HomePage';
 import TravelPage from './JS/TravelPage/TravelPage';
-
+import TravelDetail from './JS/TravelPage/TravelDetail';
 
 export default class MainPage extends React.Component {
     render() {
@@ -13,7 +13,10 @@ export default class MainPage extends React.Component {
                     <Router>
                         <Routes>
                             <Route exact path="/home" element={<HomePage />} />
+
                             <Route exact path="/travel" element={<TravelPage />} />
+                            <Route exact path="/traveldetail" element={<TravelDetail />} />
+
                         </Routes>
                     </Router>
                 </body>
