@@ -1,4 +1,38 @@
+.travel-detail-content{
+    text-align: center;
+}
+
+/* img */
 .travel-detail-img {
-    width: 312px;
+    width: 539px;
+    height: 654.75px;
     border-radius: 500px 500px 0px 0px;
+}
+
+/* introduce */
+.travel-detail-introduce-content {
+    background: #F1E4D6;
+    text-align: center;
+}
+
+.travel-detail-introduce-title {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #E26232;
+}
+
+.travel-detail-introduce-p-box {
+    width: 770px;
+    margin: auto;
+}
+
+.travel-detail-introduce-p {
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 176%;
+    text-align: center;
+    letter-spacing: 0.11em;
+    color: #000000;
+
 }
