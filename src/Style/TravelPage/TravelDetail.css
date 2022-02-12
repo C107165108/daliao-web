@@ -1,8 +1,48 @@
-.travel-detail-content{
+.travel-detail-content {
     text-align: center;
+
+}
+
+/* signup btn */
+.travel-detail-signup-btn {
+    width: 112px;
+    height: 137px;
+    border-radius: 100px 100px 0px 0px;
+    border: 1px solid #E26232;
+    background-color: transparent;
+    align-items: center;
+    padding: 24px 4px 6px 6px;
+    position: fixed;
+    bottom: 160px;
+    right: 100px;
+}
+
+.travel-detail-signup-arrow {
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0.24em;
+    color: #E26232;
+    margin: 0;
+}
+
+.travel-detail-signup-p {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.24em;
+    color: #E26232;
+    margin: 0;
+
 }
 
 /* img */
+.ravel-detail-img-content {
+    margin-top: 100px;
+    width:100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .travel-detail-img {
     width: 539px;
     height: 654.75px;
@@ -36,6 +76,6 @@
     color: #000000;
 }
 
-.travel-detail-information-content{
+.travel-detail-information-content {
     margin-bottom: 40px;
 }

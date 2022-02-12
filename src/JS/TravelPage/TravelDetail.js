@@ -1,15 +1,24 @@
 import '../../Style/TravelPage/TravelDetail.css';
 import TravelInformation from './TravelDetail/TravelInformation';
 
+
 export default function TravelDetail() {
     return (
         <div className="travel-detail-content">
 
+            <button className="travel-detail-signup-btn">
+                <p className="travel-detail-signup-p">我要</p>
+                <p className="travel-detail-signup-p">報名</p>
+                <p className="travel-detail-signup-arrow">→</p>
+            </button>
+
             <div className="travel-detail-img-content">
-                <img
-                    className="travel-detail-img"
-                    src="https://i.pinimg.com/564x/ff/4f/c5/ff4fc52ca34866abffca582cfe65890c.jpg">
-                </img>
+                
+                        <img
+                            className="travel-detail-img"
+                            src="https://i.pinimg.com/564x/ff/4f/c5/ff4fc52ca34866abffca582cfe65890c.jpg">
+                        </img>
+                   
             </div>
 
             <div className="travel-detail-introduce-content">
