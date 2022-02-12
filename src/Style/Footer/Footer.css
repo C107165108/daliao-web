@@ -1,0 +1,20 @@
+.footer-content {
+    background-color: #D1BFAC;
+}
+
+.footer-content-width {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
+
+.footer-contant-p {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.footer-social-media-box{
+    display: flex;
+}
