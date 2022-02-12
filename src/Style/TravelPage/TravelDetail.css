@@ -34,5 +34,8 @@
     text-align: center;
     letter-spacing: 0.11em;
     color: #000000;
+}
 
+.travel-detail-information-content{
+    margin-bottom: 40px;
 }

@@ -1,4 +1,5 @@
 import '../../Style/TravelPage/TravelDetail.css';
+import TravelInformation from './TravelDetail/TravelInformation';
 
 export default function TravelDetail() {
     return (
@@ -30,7 +31,8 @@ export default function TravelDetail() {
             </div>
 
             <div className="travel-detail-information-content">
-
+                <TravelInformation />
+                <TravelInformation />
             </div>
 
         </div>

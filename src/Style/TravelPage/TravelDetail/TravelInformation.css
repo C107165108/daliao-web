@@ -1,0 +1,44 @@
+.travel-information-content {
+    width: 1000px;
+    text-align: left;
+    margin: auto;
+}
+
+.travel-information-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin: 40px 0px;
+}
+
+.travel-information-content-box {
+    display: flex;
+    align-items: center;
+}
+
+.travel-information-subtitle-box {
+    background: #E26232;
+    border-radius: 60px;
+    width: 140px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel-information-subtitle {
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFEFA;
+}
+
+.travel-information-p-box {
+    margin-left: 32px;
+}
+
+.travel-information-p {
+    font-size: 16px;
+    line-height: 140%;
+    color: #616161;
+}
