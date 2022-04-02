@@ -1,5 +1,7 @@
+@import "../base.scss";
+
 .footer-content {
-    background-color: #D1BFAC;
+    background-color: $secondary;
 }
 
 .footer-content-width {
@@ -12,9 +14,9 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 140%;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.footer-social-media-box{
+.footer-social-media-box {
     display: flex;
 }

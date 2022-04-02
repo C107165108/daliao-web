@@ -1,3 +1,5 @@
+@import "../base.scss";
+
 .news-page-content {
     display: flex;
     flex-direction: column;
@@ -6,8 +8,9 @@
 }
 
 .news-page-title {
+    
     font-weight: bold;
     font-size: 28px;
     line-height: 42px;
-    color: #E26232;
+    color: $maincolor;
 }

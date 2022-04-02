@@ -1,15 +1,29 @@
+import { Link } from 'react-router-dom';
 import '../../Style/TravelPage/TravelItem.css';
 
-export default function TravelItem() {
+
+export default function TravelItem(props) {
+
+    const { travel } = props;
+
     return (
         <div className="travel-item-content">
+
             <img
                 className="travel-item-img"
-                src="https://i.pinimg.com/564x/ff/4f/c5/ff4fc52ca34866abffca582cfe65890c.jpg">
+                src={travel.img}>
             </img>
-            <h4 className="travel-item-title">鳳梨小旅行</h4>
+
+            <h4 className="travel-item-title">{travel.title}</h4>
+
             <p className="travel-item-time">10/16、17</p>
-            <button className="travel-item-btn">了解更多 →</button>
+
+            <Link
+                key={travel.id}
+                to={`${travel.id}`}>
+                <button className="travel-item-btn">了解更多 →</button>
+            </Link>
+
         </div>
     );
 }

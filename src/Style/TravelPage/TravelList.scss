@@ -1,3 +1,5 @@
+@import "../base.scss";
+
 .travel-list-content {
     display: flex;
     width: 1032px;
@@ -8,5 +10,5 @@
     font-weight: bold;
     font-size: 28px;
     line-height: 42px;
-    color: #E26232;
+    color: $maincolor;
 }
