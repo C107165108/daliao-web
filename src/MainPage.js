@@ -26,6 +26,7 @@ export default function MainPage() {
     const [news, setNews] = useState([]);
     const [homeLogo, setHomeLogo] = useState('');
     const [knowledges, setKnowledges] = useState([]);
+    const [about, setAbout] = useState([]);
 
     const homeCollectionRef = collection(db, 'home');
     const newsCollectionRef = collection(db, 'news');
@@ -50,7 +51,9 @@ export default function MainPage() {
         const getHome = async () => {
             const data = await getDocs(homeCollectionRef);
             const homedata = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-            setHomeLogo(homedata[1].homeLogo)
+            setHomeLogo(homedata[2].homeLogo);
+            console.log(homedata[0])
+            setAbout(homedata[0])
         }
 
         const getKnowledge = async () => {
@@ -63,7 +66,7 @@ export default function MainPage() {
         getTravels();
         getNews();
         getKnowledge();
-        
+
     }, [])
 
     return (
@@ -72,21 +75,23 @@ export default function MainPage() {
 
 
             <Router>
-                <Header homeLogo={homeLogo} />
-                <Routes>
-                    <Route exact path="/" element={<HomePage homeLogo={homeLogo} />} />
+                <Header homeLogo={homeLogo} about={about} />
+             
+                    <Routes>
+                        <Route exact path="/" element={<HomePage homeLogo={homeLogo} travels={travels} />} />
 
-                    <Route exact path="/travel" element={<TravelPage travels={travels} />} />
-                    <Route exact path="/travel/:id" element={<TravelDetail />} />
+                        <Route exact path="/travel" element={<TravelPage travels={travels} />} />
+                        <Route exact path="/travel/:id" element={<TravelDetail />} />
 
-                    <Route exact path="/news" element={<NewsPage news={news} />} />
-                    <Route exact path="/news/:id" element={<NewsDetail />} />
+                        <Route exact path="/news" element={<NewsPage news={news} />} />
+                        <Route exact path="/news/:id" element={<NewsDetail />} />
 
 
-                   <Route exact path="/knowledge" element={<KnowledgePage knowledges={knowledges} />} />
-                    <Route exact path="/knowledge/:id" element={<KnowledgeDetail />} />
-                </Routes>
-                <Footer homeLogo={homeLogo} />
+                        <Route exact path="/knowledge" element={<KnowledgePage knowledges={knowledges} />} />
+                        <Route exact path="/knowledge/:id" element={<KnowledgeDetail />} />
+                    </Routes>
+          
+                <Footer homeLogo={homeLogo} about={about} />
             </Router>
 
 
