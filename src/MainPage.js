@@ -16,7 +16,9 @@ import Footer from './JS/Footer/Footer';
 import Header from './JS/Header/Header';
 
 import { db } from './firebase-config';
-import { collection, getDocs } from '@firebase/firestore'
+import { collection, getDocs } from '@firebase/firestore';
+
+import './MainPage.scss'
 
 
 
@@ -70,7 +72,7 @@ export default function MainPage() {
     }, [])
 
     return (
-        <div>
+        <div className='main-page'>
 
 
 

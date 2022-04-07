@@ -5,6 +5,7 @@ import '../../Style/NewsPage/NewsItem.css';
 export default function NewsItem(props) {
 
     const { newitem } = props;
+  
 
     return (
         <div className="news-item-content">

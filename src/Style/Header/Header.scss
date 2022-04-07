@@ -1,13 +1,12 @@
 @import "../base.scss";
 
 .header {
-   
     position: fixed;
     top: 0;
     width: 100%;
 
     // @if () {
-     
+
     //     background-color: $secondary;
 
     //   } @else {
@@ -25,14 +24,44 @@
         }
 
         div {
-            width: 300px;
-            display: flex;
-            justify-content: space-between;
-           
+            .header-menu {
+                width: 40px;
+                margin-top: 20px;
+            }
+
+            .header-link-drawer {
+                width: 300px;
+                .header-link {
+                    text-decoration: none;
+                    color: #aaa;
+
+                    // p {
+                    //     margin: 100px;
+                    //     color: $maincolor;
+                    // }
+                }
+            }
+        }
+    }
+
+    .header-link-p {
+        margin: 100px;
+    }
+
+    .header-social {
+        display: flex;
+        flex-direction: column;
+        // justify-content: end;
+        align-items: flex-end;
+        padding: 0px 64px;
+        a {
+            img {
+                width: 40px;
+                margin-bottom: 5px;
+            }
         }
     }
 }
 
 @media screen {
-    
 }

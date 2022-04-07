@@ -15,6 +15,7 @@ export default function TravelDetail() {
 
     const urlPath = useParams();
     const travelId = urlPath.id;
+    console.log(travelId)
 
     const [targetTravels, setTargetTravels] = useState([]);
     const [information, setInformation] = useState([]);

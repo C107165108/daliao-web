@@ -7,6 +7,8 @@ import { collection, getDocs } from '@firebase/firestore';
 import Slideshow from '../Component/Slideshow';
 import TravelPage from '../TravelPage/TravelPage';
 
+import Banner from '../../pic/Banner.png';
+
 export default function HomePage(props) {
 
 
@@ -34,7 +36,8 @@ export default function HomePage(props) {
 
     return (
         <div className='homepage'>
-            <img src={homeImg} className='homepage-img'/>
+            <img src={Banner} className='homepage-img'/>
+
             <h3>最新活動資訊</h3>
             {/* <Slideshow carouseldata={banner} width='100vh' height='50vh' /> */}
 

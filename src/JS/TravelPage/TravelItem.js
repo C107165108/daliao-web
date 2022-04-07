@@ -20,7 +20,7 @@ export default function TravelItem(props) {
 
             <Link
                 key={travel.id}
-                to={`${travel.id}`}>
+                to={`/travel/${travel.id}`}>
                 <button className="travel-item-btn">了解更多 →</button>
             </Link>
 
