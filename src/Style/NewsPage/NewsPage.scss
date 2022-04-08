@@ -4,13 +4,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    padding: 100px 0px 40px 0px;
 }
 
 .news-page-title {
-    
     font-weight: bold;
     font-size: 28px;
     line-height: 42px;
     color: $maincolor;
+}
+
+.news-list-content {
+    margin-top: 20px;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-list-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    color: #E26232;
 }

@@ -17,7 +17,7 @@ export default function KnowledgeItem(props) {
 
     const { knowledge } = props;
     console.log(knowledge)
-    const { img, title,  mainContent, content } = knowledge
+    const { img, title, mainContent, content } = knowledge
     return (
 
 
@@ -25,7 +25,7 @@ export default function KnowledgeItem(props) {
 
             <div className='knowledge-item' onClick={handleToggle}>
                 <img src={img} />
-                <h4>{title}</h4>
+                <h3>{title}</h3>
             </div>
 
             <Backdrop
@@ -36,7 +36,6 @@ export default function KnowledgeItem(props) {
                 <div className='knowledge-item-content' >
 
                     <img
-
                         src={img}
                     />
 

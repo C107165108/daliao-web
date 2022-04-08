@@ -2,14 +2,12 @@
 .knowledge-item {
 
     cursor: pointer;
-    :hover{
-        border: 1px #aaa solid;
-    }
+    margin-bottom: 10px;
     img {
         width: 312px;
         border-radius: 30px;
     }
-    h4 {
+    h3 {
         text-align: center;
         color: $maincolor;
     }
@@ -31,13 +29,14 @@
         object-fit: cover;
     }
     div {
-        width: 45%;
+        width: 40%;
         height: 100%;
 
         color: black;
 
         h1 {
-            margin-bottom: 60px;
+            margin-top: 20px;
+            margin-bottom: 40px;
             color: $maincolor;
         }
         p {
@@ -46,6 +45,7 @@
             word-break: keep-all;
             line-height: 1.8em;
             letter-spacing: 0.1em;
+            margin-bottom: 30px;
         }
     }
 }

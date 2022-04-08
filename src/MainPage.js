@@ -14,7 +14,9 @@ import KnowledgeDetail from './JS/KnowledgePage/KnowledgeDetail';
 
 import Footer from './JS/Footer/Footer';
 import Header from './JS/Header/Header';
+
 import AddPage from './JS/AddPage/AddPage';
+import EditPage from './JS/EditPage/EditPage';
 
 import { db } from './firebase-config';
 import { collection, getDocs } from '@firebase/firestore';
@@ -52,7 +54,6 @@ export default function MainPage() {
             const data = await getDocs(newsCollectionRef);
             const newsdata = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
             setNews(newsdata);
-            console.log(newsdata)
         }
 
         const getHome = async () => {
@@ -99,8 +100,8 @@ export default function MainPage() {
 
 
                     <Route exact path="/add" element={<AddPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} />} />
-                    {/* <Route exact path="/edit" element={<EditPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} />} />
-              */}
+                    <Route exact path="/edit" element={<EditPage news={news} knowledges={knowledges}travels={travels}/>} />
+
                 </Routes>
 
                 <Footer homeLogo={homeLogo} about={about} />
