@@ -19,8 +19,11 @@
         width: 40%;
     }
     p {
-        width: 60%;
+        width: 30%;
         text-align: center;
         margin-top: 50px;
+        word-break: keep-all;
+        line-height: 1.8em;
+        letter-spacing: 0.1em;
     }
 }

@@ -63,17 +63,17 @@
 }
 
 .travel-detail-introduce-p-box {
-    width: 770px;
+    width: 30%;
     margin: auto;
 }
 
 .travel-detail-introduce-p {
-    word-wrap: break-word;
     font-size: 16px;
     line-height: 176%;
     text-align: center;
     letter-spacing: 0.11em;
     color: #000000;
+    word-break: keep-all;
 }
 
 .travel-detail-information-content {

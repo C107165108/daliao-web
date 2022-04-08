@@ -1,0 +1,51 @@
+@import "../base.scss";
+.knowledge-item {
+
+    cursor: pointer;
+    :hover{
+        border: 1px #aaa solid;
+    }
+    img {
+        width: 312px;
+        border-radius: 30px;
+    }
+    h4 {
+        text-align: center;
+        color: $maincolor;
+    }
+}
+
+.knowledge-item-content {
+    width: 80%;
+    height: 80%;
+    margin-top: 20px;
+    padding: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $mainBackgroundColor;
+    img {
+        width: 600px;
+        height: 600px;
+        object-fit: cover;
+    }
+    div {
+        width: 45%;
+        height: 100%;
+
+        color: black;
+
+        h1 {
+            margin-bottom: 60px;
+            color: $maincolor;
+        }
+        p {
+            color: $contentText;
+            overflow: auto;
+            word-break: keep-all;
+            line-height: 1.8em;
+            letter-spacing: 0.1em;
+        }
+    }
+}

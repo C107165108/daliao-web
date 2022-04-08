@@ -1,0 +1,22 @@
+@import "../base.scss";
+
+.edit-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.edit-select{
+    width: 200px;
+}
+
+
+.edit-page-from {
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 70%;
+}

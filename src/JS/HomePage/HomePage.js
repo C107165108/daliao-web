@@ -38,11 +38,11 @@ export default function HomePage(props) {
         <div className='homepage'>
             <img src={Banner} className='homepage-img'/>
 
-            <h3>最新活動資訊</h3>
+            {/* <h3>最新活動資訊</h3> */}
             {/* <Slideshow carouseldata={banner} width='100vh' height='50vh' /> */}
 
 
-            <TravelPage travels={forwardtravels} />
+            {/* <TravelPage travels={forwardtravels} /> */}
         </div>
     );
 
