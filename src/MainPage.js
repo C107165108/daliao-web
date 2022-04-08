@@ -14,7 +14,7 @@ import KnowledgeDetail from './JS/KnowledgePage/KnowledgeDetail';
 
 import Footer from './JS/Footer/Footer';
 import Header from './JS/Header/Header';
-import EditPage from './JS/EditPage/EditPage';
+import AddPage from './JS/AddPage/AddPage';
 
 import { db } from './firebase-config';
 import { collection, getDocs } from '@firebase/firestore';
@@ -98,7 +98,9 @@ export default function MainPage() {
                     <Route exact path="/knowledge/:id" element={<KnowledgeDetail />} />
 
 
-                    <Route exact path="/edit" element={<EditPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} />} />
+                    <Route exact path="/add" element={<AddPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} />} />
+                    {/* <Route exact path="/edit" element={<EditPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} />} />
+              */}
                 </Routes>
 
                 <Footer homeLogo={homeLogo} about={about} />

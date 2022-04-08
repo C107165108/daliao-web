@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 
-import '../../Style/EditPage/EditPage.scss';
+import '../../Style/AddPage/AddPage.scss';
 
-import EditNews from '../EditPage/EditNews';
-import EditKnowledge from '../EditPage/EditKnowledge';
-import EditTravel from '../EditPage/EditTravel';
+import AddNews from './AddNews';
+import AddKnowledge from './AddKnowledge';
+import AddTravel from './AddTravel';
 
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
 
-
-
-export default function EditPage(props) {
-
-    const { newsCollectionRef, knowledgeCollectionRef, travelCollectionRef } = props;
+export default function AddPage(props) {
 
     const { Option } = Select;
 
-    const [ischange, setChange] = useState('new');
+    const { newsCollectionRef, knowledgeCollectionRef, travelCollectionRef } = props;
 
+    const [ischange, setChange] = useState('new');
     const onUploadhange = ischange => { setChange(ischange) };
 
     const postClass = (ischange) => {
         switch (ischange) {
-            case 'travel': return <EditTravel travelCollectionRef={travelCollectionRef} />; break;
-            case 'new': return <EditNews newsCollectionRef={newsCollectionRef} />; break;
-            case 'knowledge': return <EditKnowledge knowledgeCollectionRef={knowledgeCollectionRef} />; break;
+            case 'travel': return <AddTravel travelCollectionRef={travelCollectionRef} />; break;
+            case 'new': return <AddNews newsCollectionRef={newsCollectionRef} />; break;
+            case 'knowledge': return <AddKnowledge knowledgeCollectionRef={knowledgeCollectionRef} />; break;
         }
     };
 

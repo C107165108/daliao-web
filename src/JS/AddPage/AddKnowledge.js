@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import NewsItem from '../NewsPage/NewsItem';
-import '../../Style/NewsPage/NewsPage.scss';
 
 import { addDoc } from '@firebase/firestore';
 
 import 'antd/dist/antd.css';
 import { Input } from 'antd';
 
-export default function EditKnowledge(props) {
+export default function AddKnowledge(props) {
 
     const { TextArea } = Input;
 
