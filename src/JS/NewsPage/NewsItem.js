@@ -12,11 +12,11 @@ export default function NewsItem(props) {
 
             <div className="news-item-content-text">
 
-                <p className="news-item-time">
+                {/* <p className="news-item-time">
                     {newitem.date.toDate().getFullYear().toString()}/
                     {newitem.date.toDate().getMonth().toString()}/
                     {newitem.date.toDate().getDate().toString()}
-                </p>
+                </p> */}
 
                 <div className="news-item-article">
                     <h4 className="news-item-title">{newitem.title}</h4>

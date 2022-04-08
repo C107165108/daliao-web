@@ -39,12 +39,12 @@ export default function Header(props) {
                     >
                         <div className='header-link-list'>
                             <Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/' ><h3 className='header-link-p'>首頁</h3></Link>
-                            <Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/travel'><h3 className='header-link-p'>小旅行</h3></Link>
-                            <Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/news'><h3 className='header-link-p'>最新消息</h3></Link>
-                            <Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/knowledge'><h3 className='header-link-p'>小知識</h3></Link>
+                            <hr /><Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/travel'><h3 className='header-link-p'>小旅行</h3></Link>
+                            <hr /><Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/news'><h3 className='header-link-p'>最新消息</h3></Link>
+                            <hr /><Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/knowledge'><h3 className='header-link-p'>小知識</h3></Link>
 
-                            <Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/edit'><h3 className='header-link-p'>編輯</h3></Link>
-                            <Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/add'><h3 className='header-link-p'>新增</h3></Link>
+                            <hr /><Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/edit'><h3 className='header-link-p'>編輯</h3></Link>
+                            <hr /><Link className='header-link' style={{ textDecoration: 'none', color: '#aaa', textAlign: 'center' }} to='/add'><h3 className='header-link-p'>新增</h3></Link>
                         </div>
                     </Drawer>
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import NewsItem from './NewsItem';
 import '../../Style/NewsPage/NewsPage.scss';
-import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 
 
 export default function NewsPage(props) {
@@ -19,7 +18,6 @@ export default function NewsPage(props) {
     return (
         <div className="news-page-content">
 
-            {/* {postClass(news[0].content)} */}
 
             <h3 className="news-list-title">最新消息</h3>
             <div className="news-list-content">

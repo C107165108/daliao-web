@@ -8,6 +8,8 @@ import Slideshow from '../Component/Slideshow';
 import TravelPage from '../TravelPage/TravelPage';
 
 import Banner from '../../pic/Banner.png';
+import { Carousel } from "antd";
+import "antd/dist/antd.css";
 
 export default function HomePage(props) {
 
@@ -17,6 +19,7 @@ export default function HomePage(props) {
 
     const [banner, setBanner] = useState([]);
     const [homeImg, setHomeImg] = useState([]);
+    const [about, setAbout] = useState([]);
     const homeCollectionRef = collection(db, 'home');
 
     useEffect(() => {
@@ -27,6 +30,7 @@ export default function HomePage(props) {
 
             setBanner(homedata[1].banner)
             setHomeImg(homedata[1].homeImg)
+            setAbout(homedata[0])
         }
         getHome();
 
@@ -36,7 +40,26 @@ export default function HomePage(props) {
 
     return (
         <div className='homepage'>
-            <img src={Banner} className='homepage-img'/>
+
+            <img src={Banner} className='homepage-img' />
+            <h1>最新消息</h1>
+
+            <Carousel autoplay style={{ width: '70%', margin: '50px auto' }}>
+                {banner.map((item) => (
+                    <div>
+                        <img style={{ width: '100%' }} src={item.image} />
+                    </div>
+                ))}
+            </Carousel>
+
+            <div className='homepage-about'>
+                <div className='homepage-about-text'>
+                    <h2>關於我們</h2>
+                    <p>{about.content}</p>
+                </div>
+                <img src={about.img} />
+
+            </div>
 
             {/* <h3>最新活動資訊</h3> */}
             {/* <Slideshow carouseldata={banner} width='100vh' height='50vh' /> */}

@@ -48,7 +48,7 @@
 
     .header-link-p {
         margin: 100px;
-        
+ 
     }
 
     .header-social {
@@ -69,6 +69,10 @@
 
 .header-link-list{
     width: 300px;
+    margin: 30px;
+    hr{
+        border: 0.01px solid $contentText;
+    }
 }
 @media screen {
 }
