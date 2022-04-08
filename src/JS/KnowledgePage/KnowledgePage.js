@@ -1,7 +1,7 @@
 import React from 'react';
 
 import KnowledgeItem from '../KnowledgePage/KnowledgeItem';
-import '../../Style/NewsPage/NewsPage.scss'
+import '../../Style/TravelPage/TravelPage.css'
 
 
 export default function KnowledgePage(props) {
@@ -9,9 +9,9 @@ export default function KnowledgePage(props) {
     const { knowledges } = props;
  
     return (
-        <div className='news-page-content'>
-            <h3 className="news-page-title">小知識</h3>
-            <div className='news-list-content'>
+        <div className='travel-page-content'>
+            <h3 className="travel-page-title">小知識</h3>
+            <div className='travel-list-content'>
                 {knowledges.map((knowledge) => {
                     return (
                         <KnowledgeItem key={knowledge.id} knowledge={knowledge} />

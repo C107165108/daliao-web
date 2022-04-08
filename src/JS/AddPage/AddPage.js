@@ -15,14 +15,17 @@ export default function AddPage(props) {
 
     const { newsCollectionRef, knowledgeCollectionRef, travelCollectionRef } = props;
 
+    const size  = "large";
+
     const [ischange, setChange] = useState('new');
     const onUploadhange = ischange => { setChange(ischange) };
 
+
     const postClass = (ischange) => {
         switch (ischange) {
-            case 'travel': return <AddTravel travelCollectionRef={travelCollectionRef} />; break;
-            case 'new': return <AddNews newsCollectionRef={newsCollectionRef} />; break;
-            case 'knowledge': return <AddKnowledge knowledgeCollectionRef={knowledgeCollectionRef} />; break;
+            case 'travel': return <AddTravel travelCollectionRef={travelCollectionRef} size={size}/>; break;
+            case 'new': return <AddNews newsCollectionRef={newsCollectionRef} size={size}/>; break;
+            case 'knowledge': return <AddKnowledge knowledgeCollectionRef={knowledgeCollectionRef} size={size}/>; break;
         }
     };
 

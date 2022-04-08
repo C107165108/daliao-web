@@ -33,7 +33,7 @@ export default function EditPage(props) {
             key: 'operation',
             width: 100,
             render: () => <a>編輯</a>,
-          },
+        },
     ]
 
 
@@ -49,12 +49,13 @@ export default function EditPage(props) {
     };
 
     return (
-        <div style={{ width: '70%', marginTop: 100 }}>
+        <div style={{ width: '70%', margin: '120px auto 40px auto', }}>
 
             <Select
                 value={ischange}
                 onChange={onUploadhange}
-                className="edit-select">
+                className="edit-select"
+                style={{ marginBottom: 20 }}>
 
                 <Option value='travel'>小旅行</Option>
                 <Option value='new'>最新消息</Option>

@@ -9,7 +9,7 @@ export default function AddKnowledge(props) {
 
     const { TextArea } = Input;
 
-    const { knowledgeCollectionRef } = props;
+    const { knowledgeCollectionRef,size } = props;
 
     const [knowledgetitle, setknowledgetitle] = useState([]);
     const [knowledgecontent, setknowledgecontent] = useState([]);
@@ -33,17 +33,17 @@ export default function AddKnowledge(props) {
     return (
         < >
 
-            <Input placeholder='標題' onChange={(e) => { setknowledgetitle(e.target.value) }} />
+            <Input size={size} placeholder='標題' onChange={(e) => { setknowledgetitle(e.target.value) }} />
             <br />
-            <TextArea placeholder='引文' onChange={(e) => { setknowledgemainContent(e.target.value) }} />
+            <TextArea size={size} placeholder='引文' onChange={(e) => { setknowledgemainContent(e.target.value) }} />
             <br />
-            <TextArea placeholder='內文' onChange={(e) => { setknowledgecontent(e.target.value) }} />
+            <TextArea size={size} placeholder='內文' onChange={(e) => { setknowledgecontent(e.target.value) }} />
             <br />
-            <Input placeholder='圖片連結' onChange={(e) => { setknowledgeimgg(e.target.value) }} />
+            <Input size={size} placeholder='圖片連結' onChange={(e) => { setknowledgeimgg(e.target.value) }} />
             <br />
 
 
-            <button onClick={createnews}>clicck</button>
+            <button onClick={createnews}>送出</button>
         </>
     );
 }

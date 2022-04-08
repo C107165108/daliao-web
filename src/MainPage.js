@@ -62,6 +62,8 @@ export default function MainPage() {
             setHomeLogo(homedata[2].homeLogo);
             console.log(homedata[0])
             setAbout(homedata[0])
+
+
         }
 
         const getKnowledge = async () => {
@@ -76,6 +78,8 @@ export default function MainPage() {
         getKnowledge();
 
     }, [])
+
+
 
     return (
         <div className='main-page'>
@@ -114,3 +118,4 @@ export default function MainPage() {
 
 
 }
+
