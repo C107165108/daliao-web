@@ -1,6 +1,6 @@
+@import "../base.scss";
 .travel-detail-content {
     text-align: center;
-
 }
 
 /* signup btn */
@@ -8,7 +8,7 @@
     width: 112px;
     height: 137px;
     border-radius: 100px 100px 0px 0px;
-    border: 1px solid #E26232;
+    border: 1px solid #e26232;
     background-color: transparent;
     align-items: center;
     padding: 24px 4px 6px 6px;
@@ -21,7 +21,7 @@
     font-size: 36px;
     text-align: center;
     letter-spacing: 0.24em;
-    color: #E26232;
+    color: #e26232;
     margin: 0;
 }
 
@@ -29,15 +29,14 @@
     font-size: 22px;
     text-align: center;
     letter-spacing: 0.24em;
-    color: #E26232;
+    color: #e26232;
     margin: 0;
-
 }
 
 /* img */
 .ravel-detail-img-content {
-    margin-top: 100px;
-    width:100%;
+    margin: 100px 0px;
+    width: 100%;
     max-width: 800px;
     padding: 20px;
     box-sizing: border-box;
@@ -47,19 +46,21 @@
     width: 539px;
     height: 654.75px;
     border-radius: 500px 500px 0px 0px;
+    margin: 100px 0px;
 }
 
 /* introduce */
 .travel-detail-introduce-content {
-    background: #F1E4D6;
+    background: #f1e4d6;
     text-align: center;
+    padding: 40px 0px;
 }
 
 .travel-detail-introduce-title {
     font-weight: bold;
     font-size: 24px;
     text-align: center;
-    color: #E26232;
+    color: #e26232;
 }
 
 .travel-detail-introduce-p-box {
@@ -78,15 +79,19 @@
 
 .travel-detail-information-content {
     margin-bottom: 40px;
+}
 
+.travel-detail-introduce-pic {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 20px;
 }
 
 .travel-information-title {
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    color: #000000;
+    color: $maincolor;
     margin: 40px 0px;
-    text-align: left;
-    width: 1000px;
+    text-align: center;
 }

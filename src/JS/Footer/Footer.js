@@ -1,8 +1,9 @@
 import '../../Style/Footer/Footer.scss';
 import GoogleMapReact from 'google-map-react';
+
 import map from '../../pic/map.png';
-import fbwt from '../../pic/fbwt.png';
-import igwt from '../../pic/igwt.png';
+import fbwt from '../../pic/icon/fbwt.png';
+import igwt from '../../pic/icon/igwt.png';
 
 
 export default function Footer(props) {

@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import '../../Style/Header/Header.scss';
-import { pic } from '../../pic/pic';
-import menu from '../../pic/menu.png';
 
+import menu from '../../pic/icon/menu.png';
+import menuwt from '../../pic/icon/menuwt.png';
+import fbwt from '../../pic/icon/fbwt.png';
+import igwt from '../../pic/icon/igwt.png';
+import fbbk from '../../pic/icon/fb.png';
+import igbk from '../../pic/icon/ig.png';
 
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
@@ -22,14 +26,14 @@ export default function Header(props) {
     }
 
     return (
-        <div className='header'>
-            <div className='header-content'>
+        <div className='header' >
+            <div className='header-content' >
 
                 <Link to='/'><img src={homeLogo} /></Link>
-
+              
                 <div>
 
-                    <img className='header-menu' src={menu} onClick={() => toggleDrawer()} />
+                    <img className='header-menu' src={window.location.pathname == "/" ? menuwt : menu} onClick={() => toggleDrawer()} />
                     <Drawer
                         className='header-link-drawer'
                         anchor='right'
@@ -52,8 +56,8 @@ export default function Header(props) {
 
             </div>
             <div className='header-social'>
-                <a href={fb} target="_blank" > <img src={pic.DNS + pic.fbIconBK} /></a>
-                <a href={ig} target="_blank" > <img src={pic.DNS + pic.igIconBK} /></a>
+                <a href={fb} target="_blank" > <img src={window.location.pathname == "/" ? fbwt : fbbk} /></a>
+                <a href={ig} target="_blank" > <img src={window.location.pathname == "/" ? igwt : igbk} /></a>
             </div>
         </div >
     );

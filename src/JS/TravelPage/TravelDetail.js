@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import '../../Style/TravelPage/TravelDetail.css';
+import '../../Style/TravelPage/TravelDetail.scss';
 
 import TravelInformation from './TravelDetail/TravelInformation';
 import Slideshow from '../Component/Slideshow';
@@ -11,6 +11,8 @@ import { db } from '../../firebase-config';
 import { collection, getDocs } from '@firebase/firestore'
 
 
+import { Carousel } from "antd";
+import "antd/dist/antd.css";
 export default function TravelDetail() {
 
     const urlPath = useParams();
@@ -44,7 +46,7 @@ export default function TravelDetail() {
 
 
 
-    const { title, subTitle, img, content } = targetTravels;
+    const { title, subTitle, img, content, pic } = targetTravels;
     const { remark, price, time, place } = information
 
     return (
@@ -66,8 +68,10 @@ export default function TravelDetail() {
             </div>
 
             <div className="travel-detail-introduce-content">
+                <img className="travel-detail-introduce-pic" src={pic} />
                 <div>
-                    <h4 className="travel-detail-introduce-title">{title}</h4>
+                    <h2 className="travel-detail-introduce-title">{title}</h2>
+                    <h3 className="travel-detail-introduce-subtitle">{subTitle}</h3>
                 </div>
                 <div className="travel-detail-introduce-p-box">
                     <p className="travel-detail-introduce-p">
@@ -75,7 +79,15 @@ export default function TravelDetail() {
                 </div>
             </div>
 
-            {detailimg ? <Slideshow carouseldata={detailimg} width='120vh'height='80vh'/> : ''}
+            {detailimg ? <Carousel autoplay style={{ width: '70%', margin: '50px auto' }}>
+                {detailimg.map((item) => (
+                    <div>
+                        <img style={{ width: '100%' }} src={item.image} />
+                    </div>
+                ))}
+            </Carousel> : ''}
+
+
 
             <div className="travel-detail-information-content">
                 <h4 className="travel-information-title">活動資訊</h4>

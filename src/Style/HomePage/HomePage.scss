@@ -13,12 +13,14 @@
     }
     .homepage-about {
         display: flex;
+        flex-wrap: wrap;
         width: 80%;
         justify-content: space-between;
         align-items: center;
         margin: 90px auto;
+
         .homepage-about-text {
-            width: 45%;
+            width: 400px;
             h2 {
                 color: $maincolor;
             }

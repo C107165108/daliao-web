@@ -60,12 +60,6 @@ export default function HomePage(props) {
                 <img src={about.img} />
 
             </div>
-
-            {/* <h3>最新活動資訊</h3> */}
-            {/* <Slideshow carouseldata={banner} width='100vh' height='50vh' /> */}
-
-
-            {/* <TravelPage travels={forwardtravels} /> */}
         </div>
     );
 

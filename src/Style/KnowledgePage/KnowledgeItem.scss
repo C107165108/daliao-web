@@ -1,6 +1,5 @@
 @import "../base.scss";
 .knowledge-item {
-
     cursor: pointer;
     margin-bottom: 10px;
     img {
@@ -15,21 +14,23 @@
 
 .knowledge-item-content {
     width: 80%;
-    height: 80%;
     margin-top: 20px;
     padding: 32px;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: $mainBackgroundColor;
     img {
-        width: 600px;
+        width: 50%;
         height: 600px;
         object-fit: cover;
+        min-width: 400px;
     }
+
     div {
-        width: 40%;
+        width: 500px;
         height: 100%;
 
         color: black;
