@@ -17,9 +17,13 @@ import Header from './JS/Header/Header';
 
 import AddPage from './JS/AddPage/AddPage';
 import EditPage from './JS/EditPage/EditPage';
+import LogInPage from './JS/LogInPage/LogInPage';
+
 
 import { db } from './firebase-config';
 import { collection, getDocs } from '@firebase/firestore';
+import { auth } from './firebase-config'
+import { onAuthStateChanged } from 'firebase/auth';
 
 import './MainPage.scss'
 
@@ -32,12 +36,12 @@ export default function MainPage() {
     const [homeLogo, setHomeLogo] = useState('');
     const [knowledges, setKnowledges] = useState([]);
     const [about, setAbout] = useState([]);
+    const [user, setUser] = useState('');
 
     const homeCollectionRef = collection(db, 'home');
     const newsCollectionRef = collection(db, 'news');
     const travelCollectionRef = collection(db, 'travels');
     const knowledgeCollectionRef = collection(db, 'knowledges');
-
 
 
 
@@ -72,12 +76,17 @@ export default function MainPage() {
             setKnowledges(knowledgedata)
         }
 
+        onAuthStateChanged(auth, (user) => {
+            setUser(user);
+        });
+
         getHome();
         getTravels();
         getNews();
         getKnowledge();
 
     }, [])
+    
 
 
 
@@ -87,7 +96,7 @@ export default function MainPage() {
 
 
             <Router>
-                <Header homeLogo={homeLogo} about={about} />
+                <Header homeLogo={homeLogo} about={about} isLogin={user ? true : false} />
 
                 <Routes>
                     <Route exact path="/" element={<HomePage homeLogo={homeLogo} travels={travels} />} />
@@ -103,8 +112,9 @@ export default function MainPage() {
                     <Route exact path="/knowledge/:id" element={<KnowledgeDetail />} />
 
 
-                    <Route exact path="/add" element={<AddPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} />} />
-                    <Route exact path="/edit" element={<EditPage news={news} knowledges={knowledges}travels={travels}/>} />
+                    <Route exact path="/add" element={<AddPage newsCollectionRef={newsCollectionRef} travelCollectionRef={travelCollectionRef} knowledgeCollectionRef={knowledgeCollectionRef} isLogin={user ? true : false} />} />
+                    <Route exact path="/edit" element={<EditPage news={news} knowledges={knowledges} travels={travels} />} />
+                    <Route exact path="/login" element={<LogInPage setUser={setUser} user={user} />} />
 
                 </Routes>
 

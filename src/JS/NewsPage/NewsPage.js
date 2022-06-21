@@ -11,7 +11,7 @@ export default function NewsPage(props) {
     const sortingDate = news.sort((a, b) => a.date > b.date ? -1 : 1);
 
 
-
+console.log(news);
 
 
 

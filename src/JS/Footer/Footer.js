@@ -4,12 +4,13 @@ import GoogleMapReact from 'google-map-react';
 import map from '../../pic/map.png';
 import fbwt from '../../pic/icon/fbwt.png';
 import igwt from '../../pic/icon/igwt.png';
+import homeLogo from '../../pic/icon/homeLogo.png';
 
 
 export default function Footer(props) {
 
-    const { homeLogo, about } = props;
-    const {  adress, mail, time, fb, ig } = about;
+    const { about } = props;
+    const { adress, mail, time, fb, ig } = about;
 
     // const center = {
     //     lat: 59.95,
@@ -34,13 +35,13 @@ export default function Footer(props) {
                         <p className="footer-contant-p">{map._long}</p> */}
 
                 <div className="footer-social-media-box">
-                    <a href={fb} target="_blank" ><img src={fbwt}/></a>
-                    <a href={ig} target="_blank" ><img src={igwt}/></a>
+                    <a href={fb} target="_blank" ><img src={fbwt} /></a>
+                    <a href={ig} target="_blank" ><img src={igwt} /></a>
 
                 </div>
             </div>
 
-            <img src={map} style={{  width: 600 }}/>
+            <img src={map} style={{ width: 600 }} />
             {/* <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                 bootstrapURLKeys={{ key:  'AIzaSyDm0A5wQp_K7uvdSUBwDX6hrZL2xSB3W3Q'}}

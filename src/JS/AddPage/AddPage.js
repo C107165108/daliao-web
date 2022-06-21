@@ -13,9 +13,9 @@ export default function AddPage(props) {
 
     const { Option } = Select;
 
-    const { newsCollectionRef, knowledgeCollectionRef, travelCollectionRef } = props;
+    const { newsCollectionRef, knowledgeCollectionRef, travelCollectionRef, isLogin } = props;
 
-    const size  = "large";
+    const size = "large";
 
     const [ischange, setChange] = useState('new');
     const onUploadhange = ischange => { setChange(ischange) };
@@ -23,29 +23,33 @@ export default function AddPage(props) {
 
     const postClass = (ischange) => {
         switch (ischange) {
-            case 'travel': return <AddTravel travelCollectionRef={travelCollectionRef} size={size}/>; break;
-            case 'new': return <AddNews newsCollectionRef={newsCollectionRef} size={size}/>; break;
-            case 'knowledge': return <AddKnowledge knowledgeCollectionRef={knowledgeCollectionRef} size={size}/>; break;
+            case 'travel': return <AddTravel travelCollectionRef={travelCollectionRef} size={size} />; break;
+            case 'new': return <AddNews newsCollectionRef={newsCollectionRef} size={size} />; break;
+            case 'knowledge': return <AddKnowledge knowledgeCollectionRef={knowledgeCollectionRef} size={size} />; break;
         }
     };
 
     return (
-        <div className="edit-page">
 
-            <div className='edit-page-from'>
-                <Select
-                    value={ischange}
-                    onChange={onUploadhange}
-                    className="edit-select">
+        <>{isLogin ?
+            <div className="edit-page">
 
-                    <Option value='travel'>小旅行</Option>
-                    <Option value='new'>最新消息</Option>
-                    <Option value='knowledge'>小知識</Option>
-                </Select>
-                <br />
-                {postClass(ischange)}
-            </div>
+                < div className='edit-page-from' >
+                    <Select
+                        value={ischange}
+                        onChange={onUploadhange}
+                        className="edit-select">
 
-        </div>
+                        <Option value='travel'>小旅行</Option>
+                        <Option value='new'>最新消息</Option>
+                        <Option value='knowledge'>小知識</Option>
+                    </Select>
+                    <br />
+                    {postClass(ischange)}
+                </div >
+
+            </div >
+            : ''}
+        </>
     );
 }
